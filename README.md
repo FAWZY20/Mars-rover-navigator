@@ -34,7 +34,7 @@ won't start to move until the first one has finished moving.
 OUTPUT:
 The output for each rover should be its final co-ordinates and heading.
 
-INPUT AND OUTPUT
+INPUT AND OUTPUT /n
 Test Input:
 5 5
 1 2 N
