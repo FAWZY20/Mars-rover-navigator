@@ -48,6 +48,6 @@ Expected Output:
 ## COMMAND LINE:
 The program will be runned with this command line:
 
- 	java -jar rover.jar input.txt
+ 	java -jar target/TestTecchniqueBnp-1.0-SNAPSHOT.jar input.txt
 
 
