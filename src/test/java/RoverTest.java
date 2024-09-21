@@ -2,6 +2,7 @@ import org.example.Plateau;
 import org.example.Position;
 import org.example.Rover;
 import org.example.RoverControler;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
@@ -30,7 +31,9 @@ public class RoverTest {
     @Test
     public void moveRoverError(){
          rover.setInstructions("LMLMLMLMMT");
-         roverControler.updatePosition(rover);
+         Assert.assertThrows(IllegalArgumentException.class, () ->{
+             roverControler.updatePosition(rover);
+         });
     }
 
     @Test
@@ -44,7 +47,9 @@ public class RoverTest {
     public void moveRoverTableOutput(){
         rover.setInstructions("LMLMLMLMMMMMMMM");
         roverControler.updatePosition(rover);
-        plateau.setValueIndex(rover.getPosition().getX(), rover.getPosition().getY());
+        Assert.assertThrows(RuntimeException.class, () ->{
+            plateau.setValueIndex(rover.getPosition().getX(), rover.getPosition().getY());
+        });
     }
 
 }
